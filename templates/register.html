@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGN-UP</title>
+    <style>
+        body {
+            background-color:grey;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color:brown; text-align:center;">Sign-in </h1>
+
+
+<form style="text-align:center;" method="post" action=" ">
+
+    {% csrf_token %}
+
+
+    <input style="height:40px; width:200px;" type="text" name="username" placeholder="Enter your username here" /> <br>
+
+
+    <input style="height:40px; width:200px;" type="text" name="first_name" placeholder="Enter your firstname here" /> <br>
+
+
+    <input style="height:40px; width:200px;" type="text" name="last_name" placeholder="Enter your lastname here" /><br>
+
+
+    <input style="height:40px; width:200px;" type="email" name="email" placeholder="Enter your mail id here" /><br>
+
+
+    <input style="height:40px; width:200px;" type="password" name="password" placeholder="Enter your password here" /><br>
+
+
+
+    <input style="height:40px; width:200px;"  type="password" name="conf_password" placeholder="Re-Enter your Password" /><br>
+
+
+
+
+    <input style="height:30px;" type="submit"> <br>
+
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+
+</body>
+</html>
